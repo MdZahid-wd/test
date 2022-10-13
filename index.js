@@ -50,7 +50,7 @@ const auth=async(req,res,next)=>{
             }
             else{
                 try{
-                    const verifyUser=jwt.verify(token,'84f0jg82bd99kwmo00e02eko2kmmnfdkjf999399330ndnndnndkirjjsnf94u9499ur8rr99r99r9900f');
+                    const verifyUser=jwt.verify(token,process.env.SECRET_KEY);
                     console.log(verifyUser.name)
                     
                     next()
