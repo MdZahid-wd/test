@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 app.get('/',async(req,res)=>{
     
     
-    const token=await jwt.sign({name:"zahid"},"84f0jg82bd99kwmo00e02eko2kmmnfdkjf999399330ndnndnndkirjjsnf94u9499ur8rr99r99r9900f",{expiresIn:'1h'});
+    const token=await jwt.sign({name:"zahid"},process.env.SECRET_KEY,{expiresIn:'1h'});
     console.log('........ttttttttt.......')
             
                 
